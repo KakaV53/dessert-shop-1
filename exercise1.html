@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Color Change</title>
+    <style>
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+        .square {
+            width: 300px;
+            height: 300px;
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+
+        @media screen and (min-width: 500px) {
+            .red {
+                background-color: blue;
+            }
+            .blue {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square red"></div>
+        <div class="square blue"></div>
+    </div>
+</body>
+</html>
