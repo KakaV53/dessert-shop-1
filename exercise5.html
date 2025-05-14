@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Rectangles</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .rectangle {
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            margin: 5px;
+        }
+        @media (max-width: 900px) {
+            .container {
+                justify-content: space-between;
+            }
+            .rectangle {
+                flex: 1 1 calc(33.33% - 10px);
+            }
+        }
+        @media (max-width: 600px) {
+            .rectangle {
+                flex: 1 1 calc(50% - 10px);
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                flex-direction: column;
+            }
+            .rectangle {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+        <div class="rectangle"></div>
+    </div>
+</body>
+</html>
